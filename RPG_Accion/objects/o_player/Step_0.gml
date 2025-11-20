@@ -3,24 +3,7 @@ if (move)
 	
 	//Input
 	
-	if (keyboard_check(vk_right) and !keyboard_check(vk_left))
-	{
-		dir_mov = 0	
-	}
-	if (keyboard_check(vk_left) and !keyboard_check(vk_right))
-	{
-		dir_mov = 180	
-	}
-	
-	if (keyboard_check(vk_up) and !keyboard_check(vk_down))
-	{
-		dir_mov = 90
-	}
-	
-	if (keyboard_check(vk_down) and !keyboard_check(vk_up))
-	{
-		dir_mov = 270
-	}
+	scr_input()
 	
 	//Speed
 	
@@ -29,27 +12,52 @@ if (move)
 		if (speed_mov < speed_max)
 		{
 			speed_mov += accel
+			speed_mov_d = ceil(speed_mov * 0.75)
 		}
 	}
 	else
 	{
 		speed_mov = 0	
+		speed_mov_d = 0
 	}
 }
 
 //Desplazamiento
 
-switch(dir_mov)
-{
-	case 0:
-	case 90:
-	case 180:
-	case 270:
-		move_contact_solid(dir_mov, speed_mov)
-		ori = dir_mov
-	break;
-}
+scr_desplazamiento()
 
 //Resets
 
 dir_mov = -1
+
+//Orientación
+
+
+switch(ori)
+{
+	case 0:
+		if (speed_mov == 0) sprite_index = s_stand_right
+		else sprite_index = s_walk_right
+		image_xscale = 1
+	break;
+		
+	case 90:
+		if (speed_mov == 0) sprite_index = s_stand_up
+		else sprite_index = s_walk_up
+		image_xscale = -1
+	break;
+	
+	case 180:
+		if (speed_mov == 0) sprite_index = s_stand_right
+		else sprite_index = s_walk_right
+		image_xscale = -1
+	break;
+	
+	case 270:
+		if (speed_mov == 0) sprite_index = s_stand_down
+		else sprite_index = s_walk_down
+		image_xscale = 1
+	break;
+}
+
+mask_index = s_player_mask
