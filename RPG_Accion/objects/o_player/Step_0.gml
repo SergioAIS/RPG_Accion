@@ -39,25 +39,39 @@ switch(ori)
 		if (speed_mov == 0) sprite_index = s_stand_right
 		else sprite_index = s_walk_right
 		image_xscale = 1
+		
+		o_inter_mask.x = x + 36
+		o_inter_mask.y = y + 10
 	break;
 		
 	case 90:
 		if (speed_mov == 0) sprite_index = s_stand_up
 		else sprite_index = s_walk_up
 		image_xscale = -1
+		
+		o_inter_mask.x = x
+		o_inter_mask.y = y - 33
 	break;
 	
 	case 180:
 		if (speed_mov == 0) sprite_index = s_stand_right
 		else sprite_index = s_walk_right
 		image_xscale = -1
+		
+		o_inter_mask.x = x - 36
+		o_inter_mask.y = y - 10
 	break;
 	
 	case 270:
 		if (speed_mov == 0) sprite_index = s_stand_down
 		else sprite_index = s_walk_down
 		image_xscale = 1
+		
+		o_inter_mask.x = x
+		o_inter_mask.y = y + 53
 	break;
 }
+
+o_inter_mask.image_angle = ori
 
 mask_index = s_player_mask
