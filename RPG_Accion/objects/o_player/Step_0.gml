@@ -5,6 +5,15 @@ if (move)
 	
 	scr_input()
 	
+	if (keyboard_check(vk_control) and weapon != "")
+	{
+		dir_mov = -1
+		att = 1
+		move = 0
+		
+		scr_att()
+	}
+	
 	//Speed
 	
 	if (dir_mov != -1)
@@ -36,7 +45,17 @@ dir_mov = -1
 switch(ori)
 {
 	case 0:
-		if (speed_mov == 0) sprite_index = s_stand_right
+		if (speed_mov == 0) 
+		{
+			if (att)
+			{
+				sprite_index = s_att_right
+			}
+			else
+			{
+				sprite_index = s_stand_right
+			}
+		}
 		else sprite_index = s_walk_right
 		image_xscale = 1
 		
@@ -45,7 +64,17 @@ switch(ori)
 	break;
 		
 	case 90:
-		if (speed_mov == 0) sprite_index = s_stand_up
+		if (speed_mov == 0) 
+		{
+			if (att)
+			{
+				sprite_index = s_att_up
+			}
+			else
+			{
+				sprite_index = s_stand_up
+			}
+		}
 		else sprite_index = s_walk_up
 		image_xscale = -1
 		
@@ -54,7 +83,17 @@ switch(ori)
 	break;
 	
 	case 180:
-		if (speed_mov == 0) sprite_index = s_stand_right
+		if (speed_mov == 0) 
+		{
+			if (att)
+			{
+				sprite_index = s_att_right
+			}
+			else
+			{
+				sprite_index = s_stand_right
+			}
+		}
 		else sprite_index = s_walk_right
 		image_xscale = -1
 		
@@ -63,7 +102,17 @@ switch(ori)
 	break;
 	
 	case 270:
-		if (speed_mov == 0) sprite_index = s_stand_down
+		if (speed_mov == 0) 
+		{
+			if (att)
+			{
+				sprite_index = s_att_down
+			}
+			else
+			{
+				sprite_index = s_stand_down
+			}
+		}
 		else sprite_index = s_walk_down
 		image_xscale = 1
 		
