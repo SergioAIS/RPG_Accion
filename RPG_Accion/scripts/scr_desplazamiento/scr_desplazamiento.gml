@@ -30,5 +30,12 @@ function scr_desplazamiento(){
 		move_contact_solid(0, speed_mov_d)
 		move_contact_solid(270, speed_mov_d)
 	break;
+	
+	case -1:
+	break;
+	
+	default: 
+		move_contact_solid(dir_mov, speed_mov)
+	break;
 }
 }

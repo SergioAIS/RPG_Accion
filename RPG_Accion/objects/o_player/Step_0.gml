@@ -37,7 +37,7 @@ scr_desplazamiento()
 
 //Resets
 
-dir_mov = -1
+if (move) dir_mov = -1
 
 //Orientación
 
@@ -124,3 +124,14 @@ switch(ori)
 o_inter_mask.image_angle = ori
 
 mask_index = s_player_mask
+
+//Control
+if (invi > 0)
+{
+	invi -= 1
+	image_alpha = 0.6
+}
+else
+{
+	image_alpha = 1
+}
