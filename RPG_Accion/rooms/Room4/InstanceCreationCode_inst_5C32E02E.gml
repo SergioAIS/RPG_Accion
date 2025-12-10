@@ -1,0 +1,1 @@
+text1 = "Las pociones sirven para curarte"

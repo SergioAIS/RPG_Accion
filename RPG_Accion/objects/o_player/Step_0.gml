@@ -49,7 +49,7 @@ switch(ori)
 		{
 			if (att)
 			{
-				sprite_index = s_att_right
+				sprite_index = s_axe_right
 			}
 			else
 			{
@@ -68,7 +68,7 @@ switch(ori)
 		{
 			if (att)
 			{
-				sprite_index = s_att_up
+				sprite_index = s_axe_up
 			}
 			else
 			{
@@ -87,7 +87,7 @@ switch(ori)
 		{
 			if (att)
 			{
-				sprite_index = s_att_right
+				sprite_index = s_axe_right
 			}
 			else
 			{
@@ -106,7 +106,7 @@ switch(ori)
 		{
 			if (att)
 			{
-				sprite_index = s_att_down
+				sprite_index = s_axe_down
 			}
 			else
 			{

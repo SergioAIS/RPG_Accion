@@ -1,3 +1,5 @@
 /// @description Interact
-
-instance_destroy()
+if (global.yellow_key == 1)
+{
+	instance_destroy()
+}

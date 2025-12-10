@@ -13,6 +13,14 @@ switch (type)
 	case "dmg":
 		draw_set_color(c_red)
 	break;
+	
+	case "obj":
+		draw_set_color(c_yellow)
+	break;
+	
+	case "hp":
+		draw_set_color(c_green)
+	break;
 }
 
 draw_text(x, y, value)
