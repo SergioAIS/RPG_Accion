@@ -1,1 +1,3 @@
-target = noone
+
+active = 1;
+target = noone;

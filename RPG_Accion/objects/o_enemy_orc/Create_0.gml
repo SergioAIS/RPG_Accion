@@ -1,17 +1,22 @@
-//Stats 
-hp = 50
-dmg = 20
 
-speed_max = 3
-wait_time = 20
-move_time = 30
+// STATS ----------------
 
-//Control
-invi = 0
-invi_max = 30
+hp = 50;
+dmg = 15;
 
-move = 0
-dir_mov = -1
+speed_max = 3;
+wait_time = 20;
+move_time = 30;
 
-collision_time = 15
-collision = 0
+// Control -------------
+
+move = 0;
+dir_mov = -1;
+
+invi = 0;
+invi_max = 30;
+
+is_hit = 0;
+hit_time = 15;
+
+alarm[0] = wait_time;

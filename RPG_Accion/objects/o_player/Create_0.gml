@@ -17,11 +17,15 @@ accel = 1
 att = 0
 weapon = ""
 
+pick_axe = 0;
+pick_fire = 0;
+
 s_att_right = noone
 s_att_up = noone
 s_att_down = noone
 
 //Control
+dead = 0;
 invi = 0
 invi_max = 60
 

@@ -10,5 +10,13 @@ function scr_change_weapon(argument0){
 			o_player.s_att_up = s_axe_up
 			o_player.s_att_down = s_axe_down
 		break;
+		
+		case "fire":
+			o_player.weapon = "fire";
+			
+			o_player.s_att_right = s_use_right;
+			o_player.s_att_up = s_use_up;
+			o_player.s_att_down = s_use_down;
+		break;	
 	}
 }

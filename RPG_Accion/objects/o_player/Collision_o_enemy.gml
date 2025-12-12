@@ -13,4 +13,10 @@ if (invi == 0 and other.dmg != 0)
 	dir_mov = point_direction(other.x, other.y, x, y)
 	speed_mov = collision_speed
 	alarm[0] = collision_time
+	
+	obj = instance_create_layer(x,y,"GUI",o_float_text);
+	obj.type = "dmg";
+	obj.value = other.dmg;
+	
+	instance_create_depth(x,y,depth-300,o_hit_dmg);
 }

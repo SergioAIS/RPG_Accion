@@ -7,5 +7,10 @@ function scr_att(){
 			image_index = 0
 			instance_create_depth(x, y, depth, o_axe)
 		break;
+		
+		case "fire":
+			image_index = 0;
+			instance_create_depth(x,y,depth-10,o_firebolt);
+		break;
 	}
 }
